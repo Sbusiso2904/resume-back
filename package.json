@@ -1,0 +1,19 @@
+{
+  "name": "resume-back",
+  "version": "1.0.0",
+  "description": "back-end for the resume-builder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sbusiso2904/resume-back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sbusiso2904/resume-back/issues"
+  },
+  "homepage": "https://github.com/Sbusiso2904/resume-back#readme"
+}
