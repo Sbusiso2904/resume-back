@@ -21,9 +21,6 @@ function AuthPassandSign(){
         maxlength: 10,
         allowedChars: /^[a-zA-Z0-9_-]+$/,
     };
-
-    
-
 }
 
 function validatePassword(password) {
@@ -44,8 +41,10 @@ function validatePassword(password) {
       errors.push("Password must contain numbers!")
   }
 
-  if(!/[!@#$%^&*()-=+_/].test(password)){
+  if(!/[!@#$%^&*()-=+_/]/.test(password)){
       errors.push("Password must contain special characters!")
   }
 
-}  
+}
+
+export default AuthPassandSign;
