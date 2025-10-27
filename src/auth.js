@@ -30,16 +30,22 @@ function validatePassword(password) {
   const errors = [];
 
   if(!password.length < 8){
-    errors.push("Password must be at least 8 characters");
+    errors.push("Password must be at least 8 characters!");
   }
 
   if(!/[A-Z]/.test(Password)){
-    errors.push("Password must contain uppercase letters")
+    errors.push("Password must contain uppercase letters!")
   }
 
   if(!/[a-z]/.test(password)){
-    errors.push("Password must contain lowercase letters")
+    errors.push("Password must contain lowercase letters!")
   }
-  
+  if(!/\d/.test(password)){
+      errors.push("Password must contain numbers!")
+  }
+
+  if(!/[!@#$%^&*()-=+_/].test(password)){
+      errors.push("Password must contain special characters!")
+  }
 
 }  
