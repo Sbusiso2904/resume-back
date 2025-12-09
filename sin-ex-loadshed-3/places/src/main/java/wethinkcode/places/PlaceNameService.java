@@ -87,8 +87,6 @@ public class PlaceNameService implements Runnable {
     private int svcPort;
 
 
-
-
     public PlaceNameService(){
         config = initConfig();
     }
