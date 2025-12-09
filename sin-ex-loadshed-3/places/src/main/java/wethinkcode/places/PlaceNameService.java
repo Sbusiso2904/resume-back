@@ -86,6 +86,7 @@ public class PlaceNameService implements Runnable {
     @Option( names = { "-p", "--port" }, description = "Service network port number" )
     private int svcPort;
 
+
     public PlaceNameService(){
         config = initConfig();
     }
