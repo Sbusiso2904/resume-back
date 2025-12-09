@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{/index.html}">
+<head></head>
+    <body>
+        <div layout:fragment="contents">
+            <h1>Schedule FOR:<span th:text="${town}"></span> IN <span th:text="${province}"></span></h1>
+            <th:block th:each="schedule: ${schedule}">
+                <p th:text="${schedule}"></p>
+            </th:block>
+        </div>
+    </body>
+</html>

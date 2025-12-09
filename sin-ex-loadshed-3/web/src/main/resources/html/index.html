@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+
+    <head>
+        <title>LightInTheSched</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Loadshedding Stage <span th:text="${stage}"></span></h1>
+            <form action="/schedule" method="get">
+                <label for="provinces">Choose a Province</label>
+        <!--        <select id="provinces" >-->
+                    <ul id="provinces">
+                    <th:block th:each="province: ${provinces}">
+                        <li><a th:href="'/towns?province=' + ${province}" th:text="${province}"></a></li>
+                        <input type="hidden" name="province" th:value="${province}">
+                    </th:block>
+                    </ul>
+        <!--        </select>-->
+
+
+                <label for="towns">Choose a Town</label>
+                <select id="towns">
+                    <th:block th:each="town: ${towns}">
+                        <option th:text="${town}"></option>
+                    </th:block>
+                </select>
+                <input type="submit" value="GET SCHEDULE">
+            </form>
+
+        <main>
+            <div layout:fragment="contents"></div>
+        </main>
+    </body>
+</html>
